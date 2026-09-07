@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💗 رسالة حب 💗</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FFB6D9 0%, #FFC0D9 50%, #FFE0EC 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hearts-top {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-size: 30px;
+            opacity: 0.7;
+        }
+
+        .heart {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .heart:nth-child(1) { animation-delay: 0s; }
+        .heart:nth-child(2) { animation-delay: 0.5s; }
+        .heart:nth-child(3) { animation-delay: 1s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .ribbon {
+            text-align: center;
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .qr-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        #qrcode {
+            display: inline-block;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            border: 3px solid #FF69B4;
+            margin: 20px 0;
+        }
+
+        #qrcode svg {
+            display: block;
+        }
+
+        .qr-label {
+            color: #C2185B;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, #FFE0EC 0%, #FFF0F6 100%);
+            border: 3px solid #FF69B4;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .message-box p {
+            margin: 15px 0;
+            color: #C2185B;
+        }
+
+        .music-player {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #FFE0EC 0%, #FFF0F6 100%);
+            border-radius: 20px;
+            border: 3px dashed #FF69B4;
+        }
+
+        .music-player h3 {
+            color: #C2185B;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .music-player iframe {
+            width: 100%;
+            max-width: 300px;
+            height: 80px;
+            border-radius: 15px;
+            border: none;
+        }
+
+        .ribbon-bottom {
+            text-align: center;
+            font-size: 35px;
+            margin: 30px 0;
+            letter-spacing: 5px;
+        }
+
+        .decorations {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            font-size: 25px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #FF69B4;
+            font-size: 14px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+                border-radius: 20px;
+            }
+
+            .message-box {
+                padding: 20px;
+                font-size: 16px;
+            }
+
+            .hearts-top {
+                font-size: 24px;
+            }
+
+            .ribbon {
+                font-size: 30px;
+            }
+
+            .ribbon-bottom {
+                font-size: 25px;
+            }
+
+            #qrcode {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hearts-top">
+            <span class="heart">💗</span>
+            <span class="heart">💗</span>
+            <span class="heart">💗</span>
+        </div>
+
+        <div class="ribbon">🎀</div>
+
+        <div class="qr-section">
+            <div id="qrcode"></div>
+            <div class="qr-label">📱 امسحي الكود بسهولة 📱</div>
+        </div>
+
+        <div class="message-box">
+            <p>أحم دي ممكن تكون حاجه بسيطه و هبله اوي 😊</p>
+            <p>أنا عارفه بس م عارفه باردو 💕</p>
+            <p>أنا عايزه أقولك إني بحبك أوي أوي يا مريم بجد! 💗</p>
+            <p>و ربنا يديمك في حياتي</p>
+            <p>و بجد بجد انتِ غاليه عندي موت 😭💕</p>
+            <p>و ربنا يخليكي ليا ❣️</p>
+        </div>
+
+        <div class="decorations">
+            <span>🎀</span>
+            <span>💗</span>
+            <span>🎀</span>
+            <span>💗</span>
+            <span>🎀</span>
+        </div>
+
+        <div class="music-player">
+            <h3>🎵 استمتعي بالأغنية 🎵</h3>
+            <iframe src="https://open.spotify.com/embed/track/52emy3aEDC79TvxZdgiurI?utm_source=generator" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="ribbon-bottom">🏡❣️🏡</div>
+
+        <div class="footer">
+            💫 تم إنشاء هذه الصفحة بحب 💫
+        </div>
+    </div>
+
+    <script>
+        // Generate QR Code
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: window.location.href,
+            width: 250,
+            height: 250,
+            colorDark: "#FF69B4",
+            colorLight: "#FFFFFF",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
